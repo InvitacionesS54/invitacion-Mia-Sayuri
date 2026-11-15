@@ -1,0 +1,1810 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Mis XV Años | Mia Sayuri Hau de la Cruz</title>
+  <meta name="description" content="Invitación digital a los XV años de Mia Sayuri Hau de la Cruz - 19 de Diciembre de 2026." />
+
+  <!-- Google Fonts: Cinzel, Cormorant Garamond, Pinyon Script y Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ivory: '#FAF8F5',
+            sage: '#EFF3F0',
+            emeraldDeep: '#1B3B2B',
+            emeraldMuted: '#2E533E',
+            gold: '#C5A059',
+            goldLight: '#E6C786',
+            goldDark: '#9E7B36'
+          },
+          fontFamily: {
+            serifTitle: ['"Cinzel"', 'serif'],
+            serifEditorial: ['"Cormorant Garamond"', 'serif'],
+            script: ['"Pinyon Script"', 'cursive'],
+            sansBody: ['"Montserrat"', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* ==========================================================================
+       VARIABLES Y RESET EDITORIAL
+       ========================================================================== */
+    :root {
+      --bg-ivory: #FAF8F5;
+      --bg-sage: #EFF3F0;
+      --emerald-deep: #1B3B2B;
+      --gold-champagne: #C5A059;
+      --gold-light: #E6C786;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      overflow-x: hidden;
+      background-color: var(--bg-ivory);
+      color: var(--emerald-deep);
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Bloqueo de scroll mientras la pantalla de introducción está activa */
+    body.lock-scroll {
+      overflow: hidden;
+      height: 100dvh;
+    }
+
+    /* ==========================================================================
+       MARCOS ARQUITECTÓNICOS Y ESTÉTICA DE ALTA COSTURA
+       ========================================================================== */
+    .arch-frame {
+      border-radius: 9999px 9999px 16px 16px;
+      position: relative;
+    }
+
+    .arch-frame-double::before {
+      content: '';
+      position: absolute;
+      inset: -8px;
+      border: 1px solid rgba(197, 160, 89, 0.45);
+      border-radius: 9999px 9999px 20px 20px;
+      pointer-events: none;
+    }
+
+    .editorial-card {
+      background: rgba(250, 248, 245, 0.88);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(197, 160, 89, 0.4);
+      box-shadow: 0 20px 45px -15px rgba(27, 59, 43, 0.08);
+      position: relative;
+    }
+
+    .editorial-card::after {
+      content: '';
+      position: absolute;
+      inset: 6px;
+      border: 1px solid rgba(197, 160, 89, 0.2);
+      pointer-events: none;
+    }
+
+    /* Efecto Shimmer en botones dorados */
+    .btn-shimmer {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .btn-shimmer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 65%;
+      height: 100%;
+      background: linear-gradient(
+        115deg,
+        transparent 0%,
+        rgba(230, 199, 134, 0.45) 50%,
+        transparent 100%
+      );
+      transform: skewX(-20deg);
+      animation: shimmerSweep 3.8s infinite;
+    }
+
+    @keyframes shimmerSweep {
+      0% { left: -120%; }
+      55%, 100% { left: 160%; }
+    }
+
+    .btn-shimmer:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(197, 160, 89, 0.45);
+    }
+
+    /* ==========================================================================
+       ANIMACIONES DE VECTORES SVG (FLOTACIÓN, PULSO Y TRAZADO DE LÍNEA)
+       ========================================================================== */
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-7px); }
+    }
+
+    @keyframes frogBreath {
+      0%, 100% { transform: translateY(0) scale(1); }
+      45% { transform: translateY(-5px) scale(1.025); }
+      60% { transform: translateY(-2px) scale(1.01); }
+    }
+
+    @keyframes twinkleStar {
+      0%, 100% { opacity: 0.25; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.18); }
+    }
+
+    @keyframes glassToastLeft {
+      0%, 100% { transform: rotate(0deg) translateX(0); }
+      50% { transform: rotate(6deg) translateX(3px); }
+    }
+
+    @keyframes glassToastRight {
+      0%, 100% { transform: rotate(0deg) translateX(0); }
+      50% { transform: rotate(-6deg) translateX(-3px); }
+    }
+
+    @keyframes soundWave {
+      0%, 100% { transform: scaleY(0.35); }
+      50% { transform: scaleY(1); }
+    }
+
+    .animate-float {
+      animation: floatSlow 4.5s ease-in-out infinite;
+    }
+
+    .animate-frog {
+      animation: frogBreath 4s ease-in-out infinite;
+      transform-origin: center bottom;
+    }
+
+    .animate-twinkle {
+      animation: twinkleStar 2.8s ease-in-out infinite;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    .animate-twinkle-delayed {
+      animation: twinkleStar 3.4s ease-in-out 1.2s infinite;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    .toast-left {
+      animation: glassToastLeft 3.2s ease-in-out infinite;
+      transform-box: fill-box;
+      transform-origin: bottom center;
+    }
+
+    .toast-right {
+      animation: glassToastRight 3.2s ease-in-out infinite;
+      transform-box: fill-box;
+      transform-origin: bottom center;
+    }
+
+    /* Dibujo progresivo de vectores SVG al hacer scroll */
+    .svg-draw path,
+    .svg-draw circle,
+    .svg-draw line,
+    .svg-draw polyline,
+    .svg-draw rect,
+    .svg-draw ellipse {
+      stroke-dasharray: 600;
+      stroke-dashoffset: 600;
+      transition: stroke-dashoffset 2.2s cubic-bezier(0.22, 1, 0.36, 1), opacity 1.2s ease;
+    }
+
+    .svg-draw.is-visible path,
+    .svg-draw.is-visible circle,
+    .svg-draw.is-visible line,
+    .svg-draw.is-visible polyline,
+    .svg-draw.is-visible rect,
+    .svg-draw.is-visible ellipse {
+      stroke-dashoffset: 0;
+    }
+
+    /* ==========================================================================
+       ANIMACIONES DE ENTRADA AL HACER SCROLL (INTERSECTION OBSERVER)
+       ========================================================================== */
+    .reveal {
+      opacity: 0;
+      will-change: transform, opacity, clip-path;
+      transition:
+        opacity 1.1s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 1.1s cubic-bezier(0.22, 1, 0.36, 1),
+        clip-path 1.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal-fade-up {
+      transform: translateY(42px);
+    }
+
+    .reveal-fade-left {
+      transform: translateX(-45px);
+    }
+
+    .reveal-fade-right {
+      transform: translateX(45px);
+    }
+
+    .reveal-zoom-in {
+      transform: scale(0.9);
+    }
+
+    .reveal-arch-clip {
+      clip-path: inset(18% 10% 18% 10% round 9999px 9999px 16px 16px);
+      transform: translateY(28px) scale(0.96);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translate(0, 0) scale(1);
+    }
+
+    .reveal-arch-clip.is-visible {
+      clip-path: inset(0% 0% 0% 0% round 9999px 9999px 16px 16px);
+    }
+
+    /* Transición de salida del Splash Screen */
+    #splash-screen {
+      transition: opacity 1.1s cubic-bezier(0.22, 1, 0.36, 1), transform 1.1s cubic-bezier(0.22, 1, 0.36, 1), visibility 1.1s;
+    }
+
+    #splash-screen.splash-hidden {
+      opacity: 0;
+      transform: scale(1.06);
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    /* Barras de sonido del reproductor flotante */
+    .sound-bar {
+      transform-box: fill-box;
+      transform-origin: center bottom;
+    }
+    .playing .bar-1 { animation: soundWave 0.9s ease-in-out infinite; }
+    .playing .bar-2 { animation: soundWave 0.7s ease-in-out 0.2s infinite; }
+    .playing .bar-3 { animation: soundWave 1.1s ease-in-out 0.4s infinite; }
+    .playing .bar-4 { animation: soundWave 0.8s ease-in-out 0.15s infinite; }
+
+    /* Ocultar barra de scroll nativa en el carrusel manteniendo funcionalidad táctil */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* ==========================================================================
+       GALERÍA POLAROID APILADA (SWIPEABLE POLAROID PHOTO STACK)
+       ========================================================================== */
+    .polaroid-stack-wrapper {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      touch-action: pan-y;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    .polaroid-stack-stage {
+      position: relative;
+      width: 100%;
+      max-width: 310px;
+      height: 410px;
+      margin: 18px auto 24px auto;
+      perspective: 1200px;
+      touch-action: pan-y;
+    }
+
+    @media (min-width: 640px) {
+      .polaroid-stack-stage {
+        max-width: 345px;
+        height: 450px;
+      }
+    }
+
+    .polaroid-stack-card {
+      position: absolute;
+      inset: 0;
+      padding: 12px 12px 36px 12px;
+      background: #FFFFFF;
+      border-radius: 6px;
+      border: 1px solid rgba(197, 160, 89, 0.35);
+      box-shadow: 0 12px 30px rgba(27, 59, 43, 0.15);
+      cursor: grab;
+      touch-action: pan-y;
+      user-select: none;
+      -webkit-user-select: none;
+      will-change: transform, opacity;
+      transform-origin: center 85%;
+      transition:
+        transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.4s ease;
+    }
+
+    .polaroid-stack-card:active {
+      cursor: grabbing;
+    }
+
+    .polaroid-stack-card.is-dragging {
+      transition: none !important;
+      cursor: grabbing;
+      box-shadow: 0 22px 44px rgba(27, 59, 43, 0.24);
+    }
+
+    .polaroid-stack-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 3px;
+      border: 1px solid rgba(197, 160, 89, 0.55);
+      background-color: var(--bg-sage);
+    }
+
+    .polaroid-stack-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      pointer-events: none;
+      user-select: none;
+      -webkit-user-drag: none;
+      display: block;
+    }
+
+    .polaroid-stack-caption {
+      position: absolute;
+      bottom: 8px;
+      left: 14px;
+      right: 14px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      pointer-events: none;
+    }
+
+    @keyframes polaroidHandSwipe {
+      0%, 100% { transform: translateX(-9px) rotate(-6deg); }
+      50% { transform: translateX(9px) rotate(6deg); }
+    }
+
+    .polaroid-stack-hand-icon {
+      animation: polaroidHandSwipe 2.2s ease-in-out infinite;
+      transform-origin: center bottom;
+    }
+  </style>
+</head>
+
+<body class="lock-scroll antialiased selection:bg-gold/20 selection:text-emeraldDeep">
+
+  <!-- ==========================================================================
+       FONDO ATMOSFÉRICO: PARTÍCULAS DORADAS (LUCIÉRNAGAS MINIMALISTAS)
+       ========================================================================== -->
+  <canvas id="fireflies-canvas" class="fixed inset-0 w-full h-full pointer-events-none z-10"></canvas>
+
+  <!-- ==========================================================================
+       AUDIO DE FONDO Y BOTÓN FLOTANTE DE SONIDO
+       ========================================================================== -->
+  <!-- CAMBIAR MÚSICA AQUÍ: Reemplaza "musica.mp3" por el archivo de audio en tu carpeta -->
+  <audio id="bg-music" src="https://res.cloudinary.com/dwf9jiy08/video/upload/v1794772551/cancion1_pmpalx.mp3" loop preload="auto"></audio>
+
+  <button
+    id="music-toggle"
+    type="button"
+    aria-label="Reproducir o pausar música de fondo"
+    class="fixed top-5 right-5 z-40 w-11 h-11 rounded-full bg-ivory/90 backdrop-blur-md border border-gold/60 shadow-md flex items-center justify-center text-emeraldDeep hover:border-gold transition-all duration-500 opacity-0 pointer-events-none"
+  >
+    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="1.5" stroke-linecap="round">
+      <circle cx="12" cy="12" r="10" stroke="#C5A059" stroke-opacity="0.35" stroke-width="1" />
+      <line class="sound-bar bar-1" x1="7.5" y1="15.5" x2="7.5" y2="9.5" />
+      <line class="sound-bar bar-2" x1="10.5" y1="16.5" x2="10.5" y2="7.5" />
+      <line class="sound-bar bar-3" x1="13.5" y1="16.5" x2="13.5" y2="8.5" />
+      <line class="sound-bar bar-4" x1="16.5" y1="15.5" x2="16.5" y2="10.5" />
+    </svg>
+  </button>
+
+  <!-- ==========================================================================
+       1. CAPA DE INTRODUCCIÓN (SPLASH SCREEN CON VIDEO)
+       ========================================================================== -->
+  <section
+    id="splash-screen"
+    class="fixed inset-0 z-50 w-full h-[100dvh] flex flex-col items-center justify-between px-6 py-12 text-center overflow-hidden bg-emeraldDeep"
+  >
+    <!-- CAMBIAR VIDEO AQUÍ: Coloca tu archivo "video-intro.mp4" en la misma carpeta que este index.html -->
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      class="absolute inset-0 w-full h-full object-cover opacity-55"
+      poster=""
+    >
+      <source src="video-intro.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Overlay oscuro/esmeralda semitransparente con desenfoque -->
+    <div
+      class="absolute inset-0 bg-gradient-to-b from-[#0E2218]/85 via-[#1B3B2B]/80 to-[#0C1D14]/90"
+      style="backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px);"
+    ></div>
+
+    <!-- Marco lineal fino interior del Splash -->
+    <div class="absolute inset-4 sm:inset-7 border border-gold/30 pointer-events-none">
+      <div class="absolute inset-1.5 border border-gold/15"></div>
+    </div>
+
+    <!-- Encabezado superior del Splash -->
+    <div class="relative z-10 mt-4">
+      <p class="font-sansBody text-[11px] sm:text-xs tracking-[0.42em] uppercase text-goldLight/90 mb-2">
+        Mis XV Años
+      </p>
+      <h1 class="font-serifTitle text-3xl sm:text-5xl tracking-[0.18em] text-ivory font-normal">
+        Mia Sayuri
+      </h1>
+      <div class="w-16 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-3"></div>
+    </div>
+
+    <!-- Centro: Vector SVG animado de Rana Minimalista con Corona sobre Nenúfar -->
+    <div class="relative z-10 my-auto flex flex-col items-center">
+      <div class="w-52 h-52 sm:w-60 sm:h-60 flex items-center justify-center">
+        <svg viewBox="0 0 220 220" class="w-full h-full overflow-visible" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Destellos / Luciérnagas vectoriales alrededor -->
+          <g class="animate-twinkle" stroke="#E6C786" stroke-width="1.1" stroke-linecap="round">
+            <path d="M42 54 L42 66 M36 60 L48 60" />
+            <circle cx="42" cy="60" r="1.5" fill="#E6C786" />
+          </g>
+          <g class="animate-twinkle-delayed" stroke="#E6C786" stroke-width="1.1" stroke-linecap="round">
+            <path d="M178 48 L178 60 M172 54 L184 54" />
+            <circle cx="178" cy="54" r="1.5" fill="#E6C786" />
+          </g>
+          <circle class="animate-twinkle" cx="30" cy="115" r="2" fill="#E6C786" />
+          <circle class="animate-twinkle-delayed" cx="190" cy="108" r="1.8" fill="#C5A059" />
+          <circle class="animate-twinkle" cx="156" cy="30" r="1.5" fill="#E6C786" />
+
+          <!-- Halo / Arco fino de fondo -->
+          <path
+            d="M46 155 A64 64 0 1 1 174 155"
+            stroke="#C5A059"
+            stroke-opacity="0.35"
+            stroke-width="1"
+            stroke-dasharray="3 4"
+          />
+
+          <!-- Nenúfar minimalista (base acuática) -->
+          <g stroke="#C5A059" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Ondas de agua sutiles -->
+            <ellipse cx="110" cy="176" rx="76" ry="15" stroke="#E6C786" stroke-opacity="0.3" stroke-width="1" />
+            <ellipse cx="110" cy="182" rx="52" ry="8" stroke="#E6C786" stroke-opacity="0.2" stroke-width="0.9" />
+            <!-- Hoja de nenúfar con hendidura clásica -->
+            <path
+              d="M110 168 L132 183 C164 181 176 170 170 160 C163 149 136 144 110 144 C78 144 50 151 48 163 C46 174 74 183 108 183 Z"
+              fill="#1B3B2B"
+              fill-opacity="0.55"
+            />
+            <!-- Nervaduras finas del nenúfar -->
+            <path d="M110 164 L72 158" stroke-opacity="0.45" stroke-width="0.9" />
+            <path d="M110 164 L85 150" stroke-opacity="0.45" stroke-width="0.9" />
+            <path d="M110 164 L138 151" stroke-opacity="0.45" stroke-width="0.9" />
+            <path d="M110 164 L150 160" stroke-opacity="0.45" stroke-width="0.9" />
+          </g>
+
+          <!-- Rana minimalista con corona dorada (animación de respiración suave) -->
+          <g class="animate-frog" stroke="#E6C786" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Corona Real Fina -->
+            <path
+              d="M95 66 L91 48 L103 57 L110 43 L117 57 L129 48 L125 66 Z"
+              fill="#C5A059"
+              fill-opacity="0.22"
+              stroke="#E6C786"
+              stroke-width="1.4"
+            />
+            <circle cx="91" cy="45.5" r="1.6" fill="#E6C786" />
+            <circle cx="110" cy="40" r="2" fill="#E6C786" />
+            <circle cx="129" cy="45.5" r="1.6" fill="#E6C786" />
+
+            <!-- Cabeza y contorno superior de la rana en line-art editorial -->
+            <path d="M84 82 C78 72 91 64 98 73 C105 70 115 70 122 73 C129 64 142 72 136 82" />
+            <!-- Ojos delicados -->
+            <circle cx="91" cy="76" r="3" fill="#E6C786" fill-opacity="0.3" />
+            <circle cx="129" cy="76" r="3" fill="#E6C786" fill-opacity="0.3" />
+            <!-- Línea suave de expresión serena -->
+            <path d="M99 91 Q110 96 121 91" stroke-width="1.2" />
+
+            <!-- Cuerpo esbelto y patas plegadas de perfil frontal editorial -->
+            <path d="M84 82 C73 95 72 122 83 146 C92 158 128 158 137 146 C148 122 147 95 136 82" />
+            <!-- Pecho / Plastrón fino -->
+            <path d="M94 104 C91 122 93 142 100 154" stroke-opacity="0.75" stroke-width="1.15" />
+            <path d="M126 104 C129 122 127 142 120 154" stroke-opacity="0.75" stroke-width="1.15" />
+            <!-- Patas traseras plegadas con elegancia -->
+            <path d="M77 118 C61 124 59 148 76 156 L92 158" />
+            <path d="M143 118 C159 124 161 148 144 156 L128 158" />
+            <!-- Manos delanteras centrales -->
+            <path d="M97 154 L92 162 M100 155 L98 163" stroke-width="1.2" />
+            <path d="M123 154 L128 162 M120 155 L122 163" stroke-width="1.2" />
+          </g>
+        </svg>
+      </div>
+
+      <p class="font-script text-2xl sm:text-3xl text-goldLight/90 tracking-wide mt-2">
+        Un cuento bajo la luz de las luciérnagas
+      </p>
+    </div>
+
+    <!-- Botón de entrada con borde dorado y efecto shimmer -->
+    <div class="relative z-10 mb-4">
+      <button
+        id="enter-invitation-btn"
+        type="button"
+        class="btn-shimmer px-9 py-4 rounded-full border border-gold bg-emeraldDeep/70 text-ivory font-sansBody text-xs sm:text-sm uppercase tracking-[0.28em] shadow-lg focus:outline-none focus:ring-2 focus:ring-goldLight"
+      >
+        Entrar a la invitación
+      </button>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONTENIDO PRINCIPAL DE LA INVITACIÓN
+       ========================================================================== -->
+  <main class="relative z-20 w-full overflow-hidden">
+
+    <!-- ========================================================================
+         2. HERO SECTION Y MENSAJE INTRODUCTORIO
+         ======================================================================== -->
+    <section class="relative min-h-[100dvh] flex flex-col items-center justify-center px-5 py-16 sm:py-24 bg-ivory">
+      <div class="w-full max-w-xl mx-auto">
+        <!-- Marco Arquitectónico en Arco Fino Dorado -->
+        <div class="arch-frame arch-frame-double border border-gold/70 bg-ivory/80 px-6 sm:px-12 pt-14 pb-16 text-center shadow-sm">
+
+          <!-- Vector SVG de la Rana Coronada en la cima del marco -->
+          <div id="hero-frog" class="reveal reveal-fade-up svg-draw w-24 h-24 mx-auto mb-4">
+            <svg viewBox="0 0 120 120" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Destellos laterales -->
+              <path d="M22 44 L22 52 M18 48 L26 48" stroke="#C5A059" stroke-width="1.1" stroke-linecap="round" />
+              <path d="M98 44 L98 52 M94 48 L102 48" stroke="#C5A059" stroke-width="1.1" stroke-linecap="round" />
+              <!-- Corona -->
+              <path d="M47 40 L44 26 L54 33 L60 22 L66 33 L76 26 L73 40 Z" stroke="#C5A059" stroke-width="1.4" stroke-linejoin="round" />
+              <circle cx="60" cy="19" r="1.8" fill="#C5A059" />
+              <!-- Silueta de Rana Real sobre Loto -->
+              <path d="M40 53 C35 45 45 40 50 47 C56 44 64 44 70 47 C75 40 85 45 80 53" stroke="#1B3B2B" stroke-width="1.4" stroke-linecap="round" />
+              <circle cx="45" cy="49" r="2" fill="#C5A059" />
+              <circle cx="75" cy="49" r="2" fill="#C5A059" />
+              <path d="M40 53 C32 64 33 82 42 93 C50 100 70 100 78 93 C87 82 88 64 80 53" stroke="#1B3B2B" stroke-width="1.4" stroke-linecap="round" />
+              <path d="M35 76 C24 80 24 93 36 97" stroke="#1B3B2B" stroke-width="1.3" stroke-linecap="round" />
+              <path d="M85 76 C96 80 96 93 84 97" stroke="#1B3B2B" stroke-width="1.3" stroke-linecap="round" />
+              <!-- Base de hoja de nenúfar -->
+              <path d="M22 99 Q60 109 98 99" stroke="#C5A059" stroke-width="1.4" stroke-linecap="round" />
+              <path d="M34 104 Q60 111 86 104" stroke="#C5A059" stroke-width="1" stroke-linecap="round" stroke-opacity="0.6" />
+            </svg>
+          </div>
+
+          <p class="reveal reveal-fade-up font-sansBody text-[11px] sm:text-xs uppercase tracking-[0.38em] text-goldDark mb-4">
+            Mis Quince Años
+          </p>
+
+          <!-- Nombre Principal y Apellidos en Versalitas -->
+          <h2 class="reveal reveal-fade-up font-serifEditorial text-5xl sm:text-6xl md:text-7xl text-emeraldDeep font-normal leading-none tracking-wide">
+            Mia Sayuri
+          </h2>
+          <p class="reveal reveal-fade-up font-serifTitle text-sm sm:text-base tracking-[0.32em] uppercase text-emeraldDeep/80 mt-4">
+            Hau de la Cruz
+          </p>
+
+          <!-- Ornamento divisorio -->
+          <div class="reveal reveal-zoom-in my-7 flex items-center justify-center gap-3">
+            <span class="w-12 h-[1px] bg-gold/60"></span>
+            <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+              <path d="M12 2 L14.5 9.5 L22 12 L14.5 14.5 L12 22 L9.5 14.5 L2 12 L9.5 9.5 Z" />
+            </svg>
+            <span class="w-12 h-[1px] bg-gold/60"></span>
+          </div>
+
+          <!-- Fecha -->
+          <p class="reveal reveal-fade-up font-serifTitle text-xl sm:text-2xl tracking-[0.35em] text-emeraldDeep font-medium">
+            19 . 12 . 2026
+          </p>
+
+          <!-- Bloque Literario con Icono SVG de Estrella / Luciérnaga -->
+          <div class="reveal reveal-fade-up mt-10 pt-8 border-t border-gold/25 relative">
+            <div class="w-10 h-10 mx-auto mb-4 animate-float">
+              <svg viewBox="0 0 48 48" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 4 L27 19 L42 22 L27 25 L24 40 L21 25 L6 22 L21 19 Z" stroke="#C5A059" stroke-width="1.3" stroke-linejoin="round" fill="#E6C786" fill-opacity="0.18" />
+                <circle cx="24" cy="22" r="2.5" fill="#C5A059" />
+                <circle cx="11" cy="10" r="1.2" fill="#C5A059" />
+                <circle cx="38" cy="34" r="1.4" fill="#C5A059" />
+              </svg>
+            </div>
+
+            <blockquote class="font-serifEditorial italic text-lg sm:text-xl leading-relaxed text-emeraldDeep/90 px-2 sm:px-6">
+              &ldquo;La princesa de este cuento, abre las puertas de su castillo. Y te invita a serparte de su mágicahistoria donde celebraráSus XV año&rdquo;
+            </blockquote>
+          </div>
+        </div>
+
+        <!-- FOTO INTERCALADA 1: Marco Arqueado con revelado al hacer scroll -->
+        <div class="mt-16 sm:mt-20 px-2">
+          <div class="reveal reveal-arch-clip arch-frame arch-frame-double overflow-hidden border border-gold/70 shadow-lg bg-sage aspect-[3/4] relative group">
+            <!-- CAMBIAR FOTOS AQUÍ: Reemplaza "foto-1.jpg" por tu primera fotografía editorial -->
+            <img
+              src="https://res.cloudinary.com/dwf9jiy08/image/upload/v1794770259/_JPH4724.JPG_uoweug.jpg"
+              alt="Retrato editorial de Mia Sayuri"
+              class="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <!-- Placeholder elegante en caso de que aún no se coloque el archivo foto-1.jpg -->
+            <div class="hidden absolute inset-0 flex-col items-center justify-center p-8 text-center bg-gradient-to-b from-sage via-ivory to-sage">
+              <svg class="w-16 h-16 mb-4 text-gold" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2">
+                <path d="M16 48 C16 30 24 18 32 18 C40 18 48 30 48 48 Z" />
+                <path d="M24 18 L22 10 L29 14 L32 8 L35 14 L42 10 L40 18" />
+                <line x1="10" y1="52" x2="54" y2="52" />
+              </svg>
+              <span class="font-serifTitle text-xs tracking-[0.3em] uppercase text-emeraldDeep/70">Retrato Editorial I</span>
+              <span class="font-serifEditorial italic text-sm text-goldDark mt-1">Coloca aquí tu archivo foto-1.jpg</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         3. SECCIÓN DE PADRES Y PADRINOS
+         ======================================================================== -->
+    <section class="relative py-20 sm:py-28 px-5 bg-sage border-y border-gold/20">
+      <div class="w-full max-w-xl mx-auto text-center">
+
+        <!-- Separador Vectorial Superior de Hojas de Lirio / Nenúfar -->
+        <div class="reveal reveal-zoom-in svg-draw w-48 h-12 mx-auto mb-8">
+          <svg viewBox="0 0 200 48" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 28 Q55 28 82 28" stroke="#C5A059" stroke-width="1.1" stroke-linecap="round" />
+            <path d="M118 28 Q145 28 190 28" stroke="#C5A059" stroke-width="1.1" stroke-linecap="round" />
+            <!-- Flor de loto / lirio central -->
+            <path d="M100 8 C94 17 94 26 100 32 C106 26 106 17 100 8 Z" stroke="#1B3B2B" stroke-width="1.3" />
+            <path d="M100 32 C90 28 84 20 86 13 C92 16 96 22 100 32 Z" stroke="#C5A059" stroke-width="1.2" />
+            <path d="M100 32 C110 28 116 20 114 13 C108 16 104 22 100 32 Z" stroke="#C5A059" stroke-width="1.2" />
+            <path d="M76 34 Q100 40 124 34" stroke="#C5A059" stroke-width="1.1" stroke-linecap="round" />
+          </svg>
+        </div>
+
+        <!-- Bloque de Padres -->
+        <div class="editorial-card rounded-2xl px-6 py-12 sm:px-12 mb-12">
+          <p class="reveal reveal-fade-up font-script text-3xl sm:text-4xl text-goldDark mb-2">
+            Con la bendición de mis padres
+          </p>
+          <p class="reveal reveal-fade-up font-sansBody text-[11px] uppercase tracking-[0.3em] text-emeraldDeep/60 mb-8">
+            Quienes guían mi camino con amor
+          </p>
+
+          <div class="space-y-4">
+            <h3 class="reveal reveal-fade-left font-serifEditorial text-2xl sm:text-3xl text-emeraldDeep font-medium tracking-wide">
+              Rolando Hau Calderón
+            </h3>
+            <div class="reveal reveal-zoom-in text-gold font-serifEditorial italic text-lg">&amp;</div>
+            <h3 class="reveal reveal-fade-right font-serifEditorial text-2xl sm:text-3xl text-emeraldDeep font-medium tracking-wide">
+              Teresita de Jesús de la Cruz Rivera
+            </h3>
+          </div>
+        </div>
+
+        <!-- Bloque de Padrinos de Brindis -->
+        <div class="editorial-card rounded-2xl px-6 py-12 sm:px-12">
+          <!-- SVG animado de dos copas chocando con destellos dorados -->
+          <div class="reveal reveal-zoom-in svg-draw w-24 h-24 mx-auto mb-4">
+            <svg viewBox="0 0 110 110" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Destellos superiores del brindis -->
+              <g class="animate-twinkle" stroke="#C5A059" stroke-width="1.3" stroke-linecap="round">
+                <line x1="55" y1="10" x2="55" y2="20" />
+                <line x1="50" y1="15" x2="60" y2="15" />
+                <line x1="41" y1="19" x2="45" y2="24" />
+                <line x1="69" y1="19" x2="65" y2="24" />
+              </g>
+              <!-- Copa Izquierda -->
+              <g class="toast-left" stroke="#1B3B2B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M30 30 L46 27 L44 55 C43 62 36 64 33 57 Z" fill="#E6C786" fill-opacity="0.2" />
+                <path d="M31 42 Q38 44 45 40" stroke="#C5A059" stroke-width="1.2" />
+                <line x1="38" y1="62" x2="34" y2="86" />
+                <line x1="26" y1="86" x2="42" y2="86" />
+              </g>
+              <!-- Copa Derecha -->
+              <g class="toast-right" stroke="#1B3B2B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M80 30 L64 27 L66 55 C67 62 74 64 77 57 Z" fill="#E6C786" fill-opacity="0.2" />
+                <path d="M65 40 Q72 44 79 42" stroke="#C5A059" stroke-width="1.2" />
+                <line x1="72" y1="62" x2="76" y2="86" />
+                <line x1="68" y1="86" x2="84" y2="86" />
+              </g>
+            </svg>
+          </div>
+
+          <p class="reveal reveal-fade-up font-script text-3xl sm:text-4xl text-goldDark mb-2">
+            Padrinos de Brindis
+          </p>
+          <p class="reveal reveal-fade-up font-sansBody text-[11px] uppercase tracking-[0.3em] text-emeraldDeep/60 mb-8">
+            Cómplices de esta celebración
+          </p>
+
+          <div class="space-y-4">
+            <h3 class="reveal reveal-fade-left font-serifEditorial text-2xl sm:text-3xl text-emeraldDeep font-medium tracking-wide">
+              Ulises Izquierdo Córdova
+            </h3>
+            <div class="reveal reveal-zoom-in text-gold font-serifEditorial italic text-lg">&amp;</div>
+            <h3 class="reveal reveal-fade-right font-serifEditorial text-2xl sm:text-3xl text-emeraldDeep font-medium tracking-wide">
+              Nuri Yazmín de la Cruz Rivera
+            </h3>
+          </div>
+        </div>
+
+        <!-- Separador Vectorial Inferior de Nenúfar -->
+        <div class="reveal reveal-zoom-in svg-draw w-44 h-10 mx-auto mt-10">
+          <svg viewBox="0 0 180 36" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 18 L75 18 M105 18 L165 18" stroke="#C5A059" stroke-width="1" stroke-linecap="round" />
+            <circle cx="90" cy="18" r="4" stroke="#C5A059" stroke-width="1.3" />
+            <circle cx="78" cy="18" r="2" fill="#C5A059" />
+            <circle cx="102" cy="18" r="2" fill="#C5A059" />
+          </svg>
+        </div>
+
+        <!-- FOTO INTERCALADA 2: Entrada lateral suave y efecto parallax ligero -->
+        <div class="mt-14 px-2">
+          <div class="reveal reveal-fade-right relative rounded-2xl overflow-hidden border border-gold/60 shadow-lg bg-ivory aspect-[4/5] group">
+            <div class="absolute inset-2.5 border border-gold/35 rounded-xl pointer-events-none z-10"></div>
+            <!-- CAMBIAR FOTOS AQUÍ: Reemplaza "foto-2.jpg" por tu segunda fotografía destacada -->
+            <img
+              src="https://res.cloudinary.com/dwf9jiy08/image/upload/v1794770259/_JPH4628.JPG_rlid4z.jpg"
+              alt="Segunda fotografía destacada de Mia Sayuri"
+              class="parallax-img w-full h-[112%] object-cover object-center transition-transform duration-700"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <!-- Placeholder elegante en caso de que aún no se coloque foto-2.jpg -->
+            <div class="hidden absolute inset-0 flex-col items-center justify-center p-8 text-center bg-gradient-to-b from-ivory via-sage to-ivory">
+              <svg class="w-16 h-16 mb-4 text-gold" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2">
+                <circle cx="32" cy="32" r="20" />
+                <path d="M32 16 L35 28 L47 32 L35 36 L32 48 L29 36 L17 32 L29 28 Z" />
+              </svg>
+              <span class="font-serifTitle text-xs tracking-[0.3em] uppercase text-emeraldDeep/70">Retrato Editorial II</span>
+              <span class="font-serifEditorial italic text-sm text-goldDark mt-1">Coloca aquí tu archivo foto-2.jpg</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         4. CUENTA REGRESIVA (TIEMPO REAL: 19 DE DICIEMBRE DE 2026, 18:00 HRS)
+         ======================================================================== -->
+    <section class="relative py-20 sm:py-28 px-5 bg-ivory">
+      <div class="w-full max-w-xl mx-auto text-center">
+
+        <!-- Vector SVG de Reloj de Bolsillo y Estrellas Animado -->
+        <div class="reveal reveal-fade-up svg-draw w-24 h-24 mx-auto mb-5 animate-float">
+          <svg viewBox="0 0 100 100" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Argolla superior del reloj de bolsillo -->
+            <circle cx="50" cy="14" r="6" stroke="#C5A059" stroke-width="1.4" />
+            <rect x="46" y="20" width="8" height="5" stroke="#C5A059" stroke-width="1.4" />
+            <!-- Caja exterior e interior del reloj -->
+            <circle cx="50" cy="56" r="31" stroke="#1B3B2B" stroke-width="1.5" />
+            <circle cx="50" cy="56" r="26" stroke="#C5A059" stroke-width="1" stroke-dasharray="2 3" />
+            <!-- Marcas horarias cardinales -->
+            <line x1="50" y1="33" x2="50" y2="37" stroke="#C5A059" stroke-width="1.4" />
+            <line x1="50" y1="75" x2="50" y2="79" stroke="#C5A059" stroke-width="1.4" />
+            <line x1="27" y1="56" x2="31" y2="56" stroke="#C5A059" stroke-width="1.4" />
+            <line x1="69" y1="56" x2="73" y2="56" stroke="#C5A059" stroke-width="1.4" />
+            <!-- Manecillas elegantes -->
+            <polyline points="50,41 50,56 61,61" stroke="#1B3B2B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="50" cy="56" r="2.2" fill="#C5A059" />
+            <!-- Estrellas laterales -->
+            <path class="animate-twinkle" d="M14 34 L16 39 L21 41 L16 43 L14 48 L12 43 L7 41 L12 39 Z" stroke="#C5A059" stroke-width="1.1" />
+            <path class="animate-twinkle-delayed" d="M86 30 L87.5 34 L91.5 35.5 L87.5 37 L86 41 L84.5 37 L80.5 35.5 L84.5 34 Z" stroke="#C5A059" stroke-width="1.1" />
+          </svg>
+        </div>
+
+        <p class="reveal reveal-fade-up font-sansBody text-[11px] uppercase tracking-[0.38em] text-goldDark mb-2">
+          Cada segundo nos acerca
+        </p>
+        <h2 class="reveal reveal-fade-up font-serifTitle text-2xl sm:text-3xl tracking-[0.2em] uppercase text-emeraldDeep mb-3">
+          Cuenta Regresiva
+        </h2>
+        <p class="reveal reveal-fade-up font-serifEditorial italic text-lg text-emeraldDeep/80 mb-10">
+          Sábado, 19 de Diciembre de 2026
+        </p>
+
+        <!-- Círculos / Arcos Finos Dorados del Contador -->
+        <div class="grid grid-cols-4 gap-2.5 sm:gap-5 max-w-md mx-auto">
+          <!-- Días -->
+          <div class="reveal reveal-zoom-in flex flex-col items-center">
+            <div class="w-18 h-18 sm:w-22 sm:h-22 aspect-square w-full rounded-full border border-gold bg-sage/60 shadow-inner flex flex-col items-center justify-center relative">
+              <div class="absolute inset-1 rounded-full border border-gold/25 pointer-events-none"></div>
+              <span id="cd-days" class="font-serifTitle text-2xl sm:text-3xl text-emeraldDeep font-semibold">00</span>
+            </div>
+            <span class="font-sansBody text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-goldDark mt-3">
+              Días
+            </span>
+          </div>
+
+          <!-- Horas -->
+          <div class="reveal reveal-zoom-in flex flex-col items-center" style="transition-delay: 100ms;">
+            <div class="w-18 h-18 sm:w-22 sm:h-22 aspect-square w-full rounded-full border border-gold bg-sage/60 shadow-inner flex flex-col items-center justify-center relative">
+              <div class="absolute inset-1 rounded-full border border-gold/25 pointer-events-none"></div>
+              <span id="cd-hours" class="font-serifTitle text-2xl sm:text-3xl text-emeraldDeep font-semibold">00</span>
+            </div>
+            <span class="font-sansBody text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-goldDark mt-3">
+              Horas
+            </span>
+          </div>
+
+          <!-- Minutos -->
+          <div class="reveal reveal-zoom-in flex flex-col items-center" style="transition-delay: 200ms;">
+            <div class="w-18 h-18 sm:w-22 sm:h-22 aspect-square w-full rounded-full border border-gold bg-sage/60 shadow-inner flex flex-col items-center justify-center relative">
+              <div class="absolute inset-1 rounded-full border border-gold/25 pointer-events-none"></div>
+              <span id="cd-minutes" class="font-serifTitle text-2xl sm:text-3xl text-emeraldDeep font-semibold">00</span>
+            </div>
+            <span class="font-sansBody text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-goldDark mt-3">
+              Minutos
+            </span>
+          </div>
+
+          <!-- Segundos -->
+          <div class="reveal reveal-zoom-in flex flex-col items-center" style="transition-delay: 300ms;">
+            <div class="w-18 h-18 sm:w-22 sm:h-22 aspect-square w-full rounded-full border border-gold bg-sage/60 shadow-inner flex flex-col items-center justify-center relative">
+              <div class="absolute inset-1 rounded-full border border-gold/25 pointer-events-none"></div>
+              <span id="cd-seconds" class="font-serifTitle text-2xl sm:text-3xl text-emeraldDeep font-semibold">00</span>
+            </div>
+            <span class="font-sansBody text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-goldDark mt-3">
+              Segundos
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         5. ITINERARIO Y UBICACIONES (CEREMONIA Y RECEPCIÓN)
+         ======================================================================== -->
+    <section class="relative py-20 sm:py-28 px-5 bg-sage border-y border-gold/20">
+      <div class="w-full max-w-xl mx-auto text-center">
+
+        <p class="reveal reveal-fade-up font-sansBody text-[11px] uppercase tracking-[0.38em] text-goldDark mb-2">
+          Dónde y Cuándo
+        </p>
+        <h2 class="reveal reveal-fade-up font-serifTitle text-2xl sm:text-3xl tracking-[0.2em] uppercase text-emeraldDeep mb-12">
+          Itinerario &amp; Ubicaciones
+        </h2>
+
+        <div class="space-y-10">
+
+
+          <!-- TARJETA 2: RECEPCIÓN -->
+          <article class="reveal reveal-fade-right editorial-card rounded-2xl px-6 py-11 sm:px-10">
+            <!-- Icono SVG animado de Corona y Nenúfar en Flor -->
+            <div class="svg-draw w-20 h-20 mx-auto mb-5 animate-float">
+              <svg viewBox="0 0 96 96" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Corona superior delicada -->
+                <path d="M35 34 L32 22 L42 28 L48 18 L54 28 L64 22 L61 34 Z" stroke="#C5A059" stroke-width="1.4" stroke-linejoin="round" />
+                <circle cx="48" cy="15" r="1.5" fill="#C5A059" />
+                <!-- Flor de Nenúfar Imperial en plena apertura -->
+                <path d="M48 40 C42 52 42 64 48 72 C54 64 54 52 48 40 Z" stroke="#1B3B2B" stroke-width="1.4" />
+                <path d="M48 72 C36 68 30 56 32 45 C40 49 44 58 48 72 Z" stroke="#1B3B2B" stroke-width="1.4" />
+                <path d="M48 72 C60 68 66 56 64 45 C56 49 52 58 48 72 Z" stroke="#1B3B2B" stroke-width="1.4" />
+                <path d="M48 72 C30 71 20 62 20 52 C30 54 39 61 48 72 Z" stroke="#C5A059" stroke-width="1.3" />
+                <path d="M48 72 C66 71 76 62 76 52 C66 54 57 61 48 72 Z" stroke="#C5A059" stroke-width="1.3" />
+                <!-- Espejo de agua -->
+                <path d="M18 77 Q48 83 78 77" stroke="#C5A059" stroke-width="1.4" stroke-linecap="round" />
+              </svg>
+            </div>
+
+            <h3 class="font-serifTitle text-lg sm:text-xl tracking-[0.24em] uppercase text-emeraldDeep mb-2">
+              Recepción
+            </h3>
+            <p class="font-serifEditorial text-3xl sm:text-4xl text-emeraldDeep font-semibold mb-3">
+              Samanes
+            </p>
+            <!-- CAMBIAR HORA DE RECEPCIÓN AQUÍ -->
+            <div class="inline-block px-5 py-1.5 rounded-full border border-gold/60 bg-ivory text-xs font-sansBody tracking-[0.28em] uppercase text-goldDark mb-6">
+              20:00 HRS
+            </div>
+
+            <p class="font-sansBody text-xs sm:text-sm text-emeraldDeep/75 leading-relaxed max-w-sm mx-auto mb-7">
+              Una velada mágica para bailar, brindar y celebrar juntos este sueño hecho realidad.
+            </p>
+
+            <!-- CAMBIAR ENLACE DE GOOGLE MAPS DE RECEPCIÓN AQUÍ -->
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Samanes"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-shimmer inline-flex items-center gap-2.5 px-7 py-3 rounded-full border border-gold bg-emeraldDeep text-ivory font-sansBody text-xs uppercase tracking-[0.22em]"
+            >
+              <svg class="w-4 h-4 text-goldLight" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M12 21 C16 16.5 19 13 19 9 A7 7 0 1 0 5 9 C5 13 8 16.5 12 21 Z" />
+                <circle cx="12" cy="9" r="2.5" />
+              </svg>
+              <span>Ver ubicación</span>
+            </a>
+          </article>
+        </div>
+
+        <!-- FOTO INTERCALADA 3: Ancho completo enmarcado con animación de zoom suave -->
+        <div class="mt-16 px-2">
+          <div class="reveal reveal-zoom-in relative rounded-2xl overflow-hidden border border-gold/70 shadow-lg bg-ivory aspect-[4/5] group">
+            <div class="absolute inset-2.5 border border-gold/30 rounded-xl pointer-events-none z-10"></div>
+            <!-- CAMBIAR FOTOS AQUÍ: Reemplaza "foto-3.jpg" por tu tercera fotografía de la quinceañera -->
+            <img
+              src="https://res.cloudinary.com/dwf9jiy08/image/upload/v1794770257/_JPH4596.JPG_xt0wqh.jpg"
+              alt="Tercera fotografía de Mia Sayuri"
+              class="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <!-- Placeholder elegante en caso de que aún no se coloque foto-3.jpg -->
+            <div class="hidden absolute inset-0 flex-col items-center justify-center p-8 text-center bg-gradient-to-b from-ivory via-sage to-ivory">
+              <svg class="w-16 h-16 mb-4 text-gold" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="12" y="10" width="40" height="44" rx="20" />
+                <circle cx="32" cy="32" r="8" />
+              </svg>
+              <span class="font-serifTitle text-xs tracking-[0.3em] uppercase text-emeraldDeep/70">Retrato Editorial III</span>
+              <span class="font-serifEditorial italic text-sm text-goldDark mt-1">Coloca aquí tu archivo foto-3.jpg</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         6. GALERÍA DE FOTOS POLAROID APILADAS (SWIPEABLE POLAROID STACK + LIGHTBOX)
+         ======================================================================== -->
+    <section class="relative py-20 sm:py-28 px-5 bg-ivory overflow-hidden">
+      <div class="w-full max-w-2xl mx-auto text-center">
+
+        <!-- Icono SVG de Marco Antiguo / Cámara Editorial -->
+        <div class="reveal reveal-fade-up svg-draw w-20 h-20 mx-auto mb-4">
+          <svg viewBox="0 0 88 88" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Marco barroco/editorial con esquinas ornamentales -->
+            <rect x="16" y="22" width="56" height="44" rx="5" stroke="#1B3B2B" stroke-width="1.4" />
+            <rect x="21" y="27" width="46" height="34" rx="3" stroke="#C5A059" stroke-width="1" />
+            <!-- Lente central y destello -->
+            <circle cx="44" cy="44" r="10" stroke="#1B3B2B" stroke-width="1.4" />
+            <circle cx="44" cy="44" r="5" stroke="#C5A059" stroke-width="1.2" />
+            <path d="M35 22 L38 16 L50 16 L53 22" stroke="#1B3B2B" stroke-width="1.4" stroke-linejoin="round" />
+            <circle cx="58" cy="33" r="1.8" fill="#C5A059" />
+          </svg>
+        </div>
+
+        <p class="reveal reveal-fade-up font-sansBody text-[11px] uppercase tracking-[0.38em] text-goldDark mb-2">
+          Galería Editorial
+        </p>
+        <h2 class="reveal reveal-fade-up font-serifTitle text-2xl sm:text-3xl tracking-[0.2em] uppercase text-emeraldDeep mb-3">
+          Momentos Mágicos
+        </h2>
+
+        <!-- Contenedor Principal de la Pila Polaroid -->
+        <div class="reveal reveal-fade-up polaroid-stack-wrapper mt-6">
+          <div id="polaroid-stack-stage" class="polaroid-stack-stage" aria-label="Pila interactiva de fotografías Polaroid">
+
+            <!-- Tarjeta Polaroid 01 -->
+            <article class="polaroid-stack-card" data-caption="Momentos Mágicos I">
+              <div class="polaroid-stack-inner">
+                <img src="https://res.cloudinary.com/dwf9jiy08/image/upload/v1794770256/_JPH4617.JPG_mb3l3v.jpg" alt="Mia Sayuri - Momentos Mágicos I" class="polaroid-stack-img" draggable="false" />
+              </div>
+              <div class="polaroid-stack-caption">
+                <span class="font-serifTitle text-[10px] tracking-[0.25em] uppercase text-emeraldDeep/70">Mia Sayuri</span>
+                <span class="font-serifEditorial italic text-xs text-goldDark">01 / 12</span>
+              </div>
+            </article>
+
+            <!-- Tarjeta Polaroid 02 -->
+            <article class="polaroid-stack-card" data-caption="Momentos Mágicos II">
+              <div class="polaroid-stack-inner">
+                <img src="https://res.cloudinary.com/dwf9jiy08/image/upload/v1794770259/_JPH4552.JPG_fezgxe.jpg" alt="Mia Sayuri - Momentos Mágicos II" class="polaroid-stack-img" draggable="false" />
+              </div>
+              <div class="polaroid-stack-caption">
+                <span class="font-serifTitle text-[10px] tracking-[0.25em] uppercase text-emeraldDeep/70">Mia Sayuri</span>
+                <span class="font-serifEditorial italic text-xs text-goldDark">02 / 12</span>
+              </div>
+            </article>
+
+            <!-- Tarjeta Polaroid 03 -->
+            <article class="polaroid-stack-card" data-caption="Momentos Mágicos III">
+              <div class="polaroid-stack-inner">
+                <img src="https://res.cloudinary.com/dwf9jiy08/image/upload/v1794770257/_JPH4752.JPG_gh37ty.jpg" alt="Mia Sayuri - Momentos Mágicos III" class="polaroid-stack-img" draggable="false" />
+              </div>
+              <div class="polaroid-stack-caption">
+                <span class="font-serifTitle text-[10px] tracking-[0.25em] uppercase text-emeraldDeep/70">Mia Sayuri</span>
+                <span class="font-serifEditorial italic text-xs text-goldDark">03 / 12</span>
+              </div>
+            </article>
+
+            <!-- Tarjeta Polaroid 04 -->
+            <article class="polaroid-stack-card" data-caption="Momentos Mágicos IV">
+              <div class="polaroid-stack-inner">
+                <img src="https://res.cloudinary.com/dwf9jiy08/image/upload/v1794770259/_JPH4537.JPG_fguttw.jpg" alt="Mia Sayuri - Momentos Mágicos IV" class="polaroid-stack-img" draggable="false" />
+              </div>
+              <div class="polaroid-stack-caption">
+                <span class="font-serifTitle text-[10px] tracking-[0.25em] uppercase text-emeraldDeep/70">Mia Sayuri</span>
+                <span class="font-serifEditorial italic text-xs text-goldDark">04 / 12</span>
+              </div>
+            </article>
+
+            <!-- Tarjeta Polaroid 05 -->
+            <article class="polaroid-stack-card" data-caption="Momentos Mágicos V">
+              <div class="polaroid-stack-inner">
+                <img src="https://res.cloudinary.com/dwf9jiy08/image/upload/v1794770258/_JPH4621.JPG_vss300.jpg" alt="Mia Sayuri - Momentos Mágicos V" class="polaroid-stack-img" draggable="false" />
+              </div>
+              <div class="polaroid-stack-caption">
+                <span class="font-serifTitle text-[10px] tracking-[0.25em] uppercase text-emeraldDeep/70">Mia Sayuri</span>
+                <span class="font-serifEditorial italic text-xs text-goldDark">05 / 12</span>
+              </div>
+            </article>
+
+            <!-- Tarjeta Polaroid 06 -->
+            <article class="polaroid-stack-card" data-caption="Momentos Mágicos VI">
+              <div class="polaroid-stack-inner">
+                <img src="https://res.cloudinary.com/dwf9jiy08/image/upload/v1794770259/_JPH4580.JPG_pmp6ku.jpg" alt="Mia Sayuri - Momentos Mágicos VI" class="polaroid-stack-img" draggable="false" />
+              </div>
+              <div class="polaroid-stack-caption">
+                <span class="font-serifTitle text-[10px] tracking-[0.25em] uppercase text-emeraldDeep/70">Mia Sayuri</span>
+                <span class="font-serifEditorial italic text-xs text-goldDark">06 / 12</span>
+              </div>
+            </article>
+
+            <!-- Tarjeta Polaroid 07 (Nueva imagen de Cloudinary 1) -->
+            <article class="polaroid-stack-card" data-caption="Momentos Mágicos VII">
+              <div class="polaroid-stack-inner">
+                <img src="https://res.cloudinary.com/dwf9jiy08/image/upload/v1794773303/_JPH4693.JPG_rp9n2b.jpg" alt="Mia Sayuri - Momentos Mágicos VII" class="polaroid-stack-img" draggable="false" />
+              </div>
+              <div class="polaroid-stack-caption">
+                <span class="font-serifTitle text-[10px] tracking-[0.25em] uppercase text-emeraldDeep/70">Mia Sayuri</span>
+                <span class="font-serifEditorial italic text-xs text-goldDark">07 / 12</span>
+              </div>
+            </article>
+
+            <!-- Tarjeta Polaroid 08 (Nueva imagen de Cloudinary 2) -->
+            <article class="polaroid-stack-card" data-caption="Momentos Mágicos VIII">
+              <div class="polaroid-stack-inner">
+                <img src="https://res.cloudinary.com/dwf9jiy08/image/upload/v1794773304/_JPH4711.JPG_gtvyc6.jpg" alt="Mia Sayuri - Momentos Mágicos VIII" class="polaroid-stack-img" draggable="false" />
+              </div>
+              <div class="polaroid-stack-caption">
+                <span class="font-serifTitle text-[10px] tracking-[0.25em] uppercase text-emeraldDeep/70">Mia Sayuri</span>
+                <span class="font-serifEditorial italic text-xs text-goldDark">08 / 12</span>
+              </div>
+            </article>
+
+            <!-- Tarjeta Polaroid 09 (Reutilizada del resto de la invitación) -->
+            <article class="polaroid-stack-card" data-caption="Momentos Mágicos IX">
+              <div class="polaroid-stack-inner">
+                <img src="https://res.cloudinary.com/dwf9jiy08/image/upload/v1794770259/_JPH4724.JPG_uoweug.jpg" alt="Mia Sayuri - Momentos Mágicos IX" class="polaroid-stack-img" draggable="false" />
+              </div>
+              <div class="polaroid-stack-caption">
+                <span class="font-serifTitle text-[10px] tracking-[0.25em] uppercase text-emeraldDeep/70">Mia Sayuri</span>
+                <span class="font-serifEditorial italic text-xs text-goldDark">09 / 12</span>
+              </div>
+            </article>
+
+            <!-- Tarjeta Polaroid 10 (Reutilizada del resto de la invitación) -->
+            <article class="polaroid-stack-card" data-caption="Momentos Mágicos X">
+              <div class="polaroid-stack-inner">
+                <img src="https://res.cloudinary.com/dwf9jiy08/image/upload/v1794770259/_JPH4628.JPG_rlid4z.jpg" alt="Mia Sayuri - Momentos Mágicos X" class="polaroid-stack-img" draggable="false" />
+              </div>
+              <div class="polaroid-stack-caption">
+                <span class="font-serifTitle text-[10px] tracking-[0.25em] uppercase text-emeraldDeep/70">Mia Sayuri</span>
+                <span class="font-serifEditorial italic text-xs text-goldDark">10 / 12</span>
+              </div>
+            </article>
+
+            <!-- Tarjeta Polaroid 11 (Reutilizada del resto de la invitación) -->
+            <article class="polaroid-stack-card" data-caption="Momentos Mágicos XI">
+              <div class="polaroid-stack-inner">
+                <img src="https://res.cloudinary.com/dwf9jiy08/image/upload/v1794770257/_JPH4596.JPG_xt0wqh.jpg" alt="Mia Sayuri - Momentos Mágicos XI" class="polaroid-stack-img" draggable="false" />
+              </div>
+              <div class="polaroid-stack-caption">
+                <span class="font-serifTitle text-[10px] tracking-[0.25em] uppercase text-emeraldDeep/70">Mia Sayuri</span>
+                <span class="font-serifEditorial italic text-xs text-goldDark">11 / 12</span>
+              </div>
+            </article>
+
+            <!-- Tarjeta Polaroid 12 (Reutilizada del resto de la invitación) -->
+            <article class="polaroid-stack-card" data-caption="Momentos Mágicos XII">
+              <div class="polaroid-stack-inner">
+                <img src="https://res.cloudinary.com/dwf9jiy08/image/upload/v1794772101/_JPH4679.JPG_vcnhd3.jpg" alt="Mia Sayuri - Momentos Mágicos XII" class="polaroid-stack-img" draggable="false" />
+              </div>
+              <div class="polaroid-stack-caption">
+                <span class="font-serifTitle text-[10px] tracking-[0.25em] uppercase text-emeraldDeep/70">Mia Sayuri</span>
+                <span class="font-serifEditorial italic text-xs text-goldDark">12 / 12</span>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- Indicador Vectorial Animado de Mano Deslizando (Cero Emojis) -->
+          <div class="mt-4 flex flex-col items-center justify-center gap-2">
+            <div class="w-14 h-10 flex items-center justify-center">
+              <svg viewBox="0 0 64 44" class="w-full h-full overflow-visible" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Flechas laterales de deslizamiento -->
+                <path d="M14 14 L7 14 M7 14 L10.5 10.5 M7 14 L10.5 17.5" stroke="#C5A059" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M50 14 L57 14 M57 14 L53.5 10.5 M57 14 L53.5 17.5" stroke="#C5A059" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                <!-- Mano vectorial fina con animación de vaivén lateral -->
+                <g class="polaroid-stack-hand-icon" stroke="#1B3B2B" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M30 22 V11.5 A2 2 0 0 1 34 11.5 V20" fill="#FAF8F5" />
+                  <path d="M34 18.5 A2 2 0 0 1 38 18.5 V21" />
+                  <path d="M38 19.5 A2 2 0 0 1 42 19.5 V26 C42 32 38.5 36 33 36 H30.5 C26.5 36 24 33 22.5 29.5 L20.5 25 A2 2 0 0 1 23.8 23 L26.5 26 V20 A2 2 0 0 1 30 20" fill="#FAF8F5" />
+                  <circle cx="32" cy="7" r="1.5" fill="#C5A059" stroke="none" />
+                </g>
+              </svg>
+            </div>
+            <p class="font-serifEditorial italic text-base sm:text-lg text-emeraldDeep/85 tracking-wide">
+              Desliza para ver más fotos o toca para ampliar
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         7. CÓDIGO DE VESTIMENTA
+         ======================================================================== -->
+    <section class="relative py-20 sm:py-28 px-5 bg-sage border-y border-gold/20">
+      <div class="w-full max-w-xl mx-auto text-center">
+
+        <div class="editorial-card rounded-2xl px-6 py-12 sm:px-12">
+          <p class="reveal reveal-fade-up font-sansBody text-[11px] uppercase tracking-[0.38em] text-goldDark mb-2">
+            Etiqueta de la Noche
+          </p>
+          <h2 class="reveal reveal-fade-up font-serifTitle text-xl sm:text-2xl tracking-[0.18em] uppercase text-emeraldDeep mb-8">
+            Código de Vestimenta: Formal Elegante
+          </h2>
+
+          <!-- Ilustración en Vectores SVG Minimalistas de Traje Formal y Vestido de Gala -->
+          <div class="reveal reveal-zoom-in svg-draw w-56 h-44 mx-auto mb-8 animate-float">
+            <svg viewBox="0 0 220 170" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Traje Formal / Smoking (Izquierda) -->
+              <g stroke="#1B3B2B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <!-- Cuello y Corbatín Dorado -->
+                <path d="M52 28 L65 40 L78 28" />
+                <polygon points="58,33 65,36 58,39" fill="#C5A059" stroke="#C5A059" stroke-width="1" />
+                <polygon points="72,33 65,36 72,39" fill="#C5A059" stroke="#C5A059" stroke-width="1" />
+                <!-- Hombros y Saco -->
+                <path d="M52 28 L34 36 L30 92 L43 92 L45 55" />
+                <path d="M78 28 L96 36 L100 92 L87 92 L85 55" />
+                <!-- Solapas en V y cierre -->
+                <path d="M52 28 L65 72 L78 28" stroke="#C5A059" stroke-width="1.3" />
+                <path d="M45 55 L45 102 L85 102 L85 55" />
+                <!-- Botones -->
+                <circle cx="65" cy="78" r="1.5" fill="#C5A059" />
+                <circle cx="65" cy="86" r="1.5" fill="#C5A059" />
+                <!-- Pantalón formal -->
+                <path d="M48 102 L46 154 L62 154 L65 116 L68 154 L84 154 L82 102" />
+              </g>
+
+              <!-- Línea divisoria sutil central -->
+              <line x1="112" y1="30" x2="112" y2="145" stroke="#C5A059" stroke-opacity="0.35" stroke-dasharray="3 4" />
+
+              <!-- Vestido de Gala de Alta Costura (Derecha) -->
+              <g stroke="#1B3B2B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <!-- Escote corazón y tirantes finos -->
+                <path d="M148 26 L150 38" stroke="#C5A059" />
+                <path d="M172 26 L170 38" stroke="#C5A059" />
+                <path d="M147 38 C152 33 158 36 160 40 C162 36 168 33 173 38" />
+                <!-- Corsé entallado -->
+                <path d="M147 38 L151 66 L169 66 L173 38" />
+                <line x1="149" y1="66" x2="171" y2="66" stroke="#C5A059" stroke-width="1.6" />
+                <!-- Falda amplia fluida de gala con pliegues editoriales -->
+                <path d="M151 66 C138 94 128 126 124 152 Q160 160 196 152 C192 126 182 94 169 66" fill="#E6C786" fill-opacity="0.15" />
+                <path d="M156 66 C150 98 145 128 143 154" stroke="#C5A059" stroke-width="1.1" />
+                <path d="M164 66 C170 98 175 128 177 154" stroke="#C5A059" stroke-width="1.1" />
+              </g>
+            </svg>
+          </div>
+
+          <p class="reveal reveal-fade-up font-serifEditorial text-lg sm:text-xl text-emeraldDeep/85 mb-8">
+            Damas: Vestido largo de gala &nbsp;|&nbsp; Caballeros: Traje formal
+          </p>
+
+          <!-- Nota sutil reservando el tono verde esmeralda/princesa para la quinceañera -->
+          <div class="reveal reveal-fade-up pt-7 border-t border-gold/30 flex flex-col items-center">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="w-5 h-5 rounded-full bg-emeraldDeep border border-gold shadow-sm"></span>
+              <span class="w-5 h-5 rounded-full bg-[#3A634C] border border-gold shadow-sm"></span>
+              <span class="w-5 h-5 rounded-full bg-[#7A9A86] border border-gold shadow-sm"></span>
+            </div>
+            <p class="font-serifEditorial italic text-base sm:text-lg text-emeraldDeep/90 max-w-sm">
+              Nota especial: Los tonos verde esmeralda y verde princesa están reservados exclusivamente para la quinceañera.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         8. CONFIRMACIÓN DE ASISTENCIA (RSVP POR WHATSAPP) Y FOTO FINAL
+         ======================================================================== -->
+    <section class="relative py-20 sm:py-28 px-5 bg-ivory">
+      <div class="w-full max-w-xl mx-auto text-center">
+
+        <div class="editorial-card rounded-2xl px-6 py-12 sm:px-12">
+          <!-- Icono SVG de Sobre Lacrado Imperial -->
+          <div class="reveal reveal-zoom-in svg-draw w-24 h-20 mx-auto mb-5 animate-float">
+            <svg viewBox="0 0 110 86" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="14" y="14" width="82" height="58" rx="4" stroke="#1B3B2B" stroke-width="1.4" />
+              <!-- Solapa del sobre -->
+              <path d="M14 16 L55 48 L96 16" stroke="#1B3B2B" stroke-width="1.4" stroke-linejoin="round" />
+              <path d="M14 70 L42 44 M96 70 L68 44" stroke="#C5A059" stroke-width="1.1" stroke-opacity="0.7" />
+              <!-- Sello de lacre dorado con corona mínima -->
+              <circle cx="55" cy="46" r="11" fill="#FAF8F5" stroke="#C5A059" stroke-width="1.5" />
+              <circle cx="55" cy="46" r="8" stroke="#C5A059" stroke-width="0.9" stroke-dasharray="2 2" />
+              <path d="M50 49 L49 43 L52.5 46 L55 42 L57.5 46 L61 43 L60 49 Z" stroke="#C5A059" stroke-width="1.1" fill="#E6C786" fill-opacity="0.35" />
+            </svg>
+          </div>
+
+          <p class="reveal reveal-fade-up font-sansBody text-[11px] uppercase tracking-[0.38em] text-goldDark mb-2">
+            R . S . V . P .
+          </p>
+          <h2 class="reveal reveal-fade-up font-serifTitle text-2xl sm:text-3xl tracking-[0.18em] uppercase text-emeraldDeep mb-5">
+            Confirmación de Asistencia
+          </h2>
+
+          <p class="reveal reveal-fade-up font-serifEditorial text-xl sm:text-2xl text-emeraldDeep/90 leading-relaxed max-w-md mx-auto mb-9">
+            Tu presencia hará este cuento realidad. Favor de confirmar asistencia antes del <span class="font-semibold text-emeraldDeep underline decoration-gold/60 underline-offset-4">2 de diciembre de 2026</span>.
+          </p>
+
+          <!-- Botón Principal con Icono SVG de WhatsApp -->
+          <div class="reveal reveal-fade-up">
+            <a
+              href="https://wa.me/529933649627?text=Hola,%20quiero%20confirmar%20mi%20asistencia%20a%20los%20XV%20a%C3%B1os%20de%20Mia%20Sayuri"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-shimmer inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full border border-gold bg-emeraldDeep text-ivory font-sansBody text-xs sm:text-sm uppercase tracking-[0.24em] shadow-lg"
+            >
+              <!-- Vector SVG de WhatsApp en trazo fino dorado -->
+              <svg class="w-5 h-5 text-goldLight shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                <path d="M9.5 9.2c.2-.4.5-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4 0 .6l-.5.6c-.1.2-.2.3 0 .6.3.5.8 1.1 1.4 1.5.3.2.4.1.6 0l.6-.5c.2-.1.4-.1.6 0l1.6.7c.3.1.4.3.4.5v.5c0 .2 0 .5-.4.7-.5.3-1.3.5-2.1.2-1.4-.4-2.9-1.5-3.9-2.9-.7-1-1-2-.7-2.6z" />
+              </svg>
+              <span>Confirmar por WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- FOTO FINAL / CIERRE (foto-4.jpg) -->
+        <div class="mt-16 sm:mt-20 px-2">
+          <div class="reveal reveal-arch-clip arch-frame arch-frame-double overflow-hidden border border-gold/70 shadow-lg bg-sage aspect-[3/4] relative group">
+            <!-- CAMBIAR FOTOS AQUÍ: Reemplaza "foto-4.jpg" por tu última fotografía de despedida -->
+            <img
+              src="https://res.cloudinary.com/dwf9jiy08/image/upload/v1794772101/_JPH4679.JPG_vcnhd3.jpg"
+              alt="Fotografía de despedida de Mia Sayuri"
+              class="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <!-- Placeholder elegante en caso de que aún no se coloque foto-4.jpg -->
+            <div class="hidden absolute inset-0 flex-col items-center justify-center p-8 text-center bg-gradient-to-b from-sage via-ivory to-sage">
+              <svg class="w-16 h-16 mb-4 text-gold" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2">
+                <path d="M16 48 C16 30 24 18 32 18 C40 18 48 30 48 48 Z" />
+                <circle cx="32" cy="32" r="5" />
+              </svg>
+              <span class="font-serifTitle text-xs tracking-[0.3em] uppercase text-emeraldDeep/70">Retrato Final IV</span>
+              <span class="font-serifEditorial italic text-sm text-goldDark mt-1">Coloca aquí tu archivo foto-4.jpg</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         FOOTER MINIMALISTA (RANA, NENÚFAR E INICIALES M | S)
+         ======================================================================== -->
+    <footer class="relative py-16 px-5 bg-emeraldDeep text-ivory text-center border-t border-gold/40">
+      <div class="w-full max-w-md mx-auto flex flex-col items-center">
+
+        <!-- Silueta Vectorial de la Rana y la Flor de Loto / Nenúfar -->
+        <div class="reveal reveal-fade-up svg-draw w-28 h-24 mb-5">
+          <svg viewBox="0 0 140 110" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Corona mínima -->
+            <path d="M60 28 L58 19 L65 24 L70 16 L75 24 L82 19 L80 28 Z" stroke="#E6C786" stroke-width="1.3" stroke-linejoin="round" />
+            <!-- Silueta de rana real -->
+            <path d="M55 37 C51 31 58 28 62 33 C67 31 73 31 78 33 C82 28 89 31 85 37" stroke="#E6C786" stroke-width="1.3" stroke-linecap="round" />
+            <path d="M55 37 C49 46 50 60 58 68 C64 73 76 73 82 68 C90 60 91 46 85 37" stroke="#E6C786" stroke-width="1.3" stroke-linecap="round" />
+            <!-- Pétalos de flor de loto / nenúfar en la base -->
+            <path d="M70 62 C64 71 64 81 70 88 C76 81 76 71 70 62 Z" stroke="#C5A059" stroke-width="1.2" />
+            <path d="M70 88 C58 84 50 75 52 65 C60 69 65 77 70 88 Z" stroke="#C5A059" stroke-width="1.2" />
+            <path d="M70 88 C82 84 90 75 88 65 C80 69 75 77 70 88 Z" stroke="#C5A059" stroke-width="1.2" />
+            <path d="M70 88 C52 87 40 79 38 70 C50 72 60 79 70 88 Z" stroke="#C5A059" stroke-width="1.1" stroke-opacity="0.75" />
+            <path d="M70 88 C88 87 100 79 102 70 C90 72 80 79 70 88 Z" stroke="#C5A059" stroke-width="1.1" stroke-opacity="0.75" />
+            <path d="M26 94 Q70 102 114 94" stroke="#E6C786" stroke-width="1.2" stroke-linecap="round" />
+          </svg>
+        </div>
+
+        <!-- Monograma de Iniciales M | S -->
+        <div class="reveal reveal-zoom-in flex items-center justify-center gap-4 my-2">
+          <span class="font-serifTitle text-3xl sm:text-4xl tracking-[0.2em] text-goldLight">M</span>
+          <span class="w-[1px] h-8 bg-gold/60"></span>
+          <span class="font-serifTitle text-3xl sm:text-4xl tracking-[0.2em] text-goldLight">S</span>
+        </div>
+
+        <p class="reveal reveal-fade-up font-serifEditorial italic text-lg text-ivory/85 mt-3">
+          Mia Sayuri Hau de la Cruz
+        </p>
+        <p class="reveal reveal-fade-up font-sansBody text-[10px] uppercase tracking-[0.38em] text-gold/80 mt-2">
+          19 . Diciembre . 2026
+        </p>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ==========================================================================
+       MODAL LIGHTBOX A PANTALLA COMPLETA PARA LA GALERÍA
+       ========================================================================== -->
+  <div
+    id="lightbox-modal"
+    class="fixed inset-0 z-50 bg-[#0D1F16]/90 hidden items-center justify-center p-4 opacity-0 transition-opacity duration-300"
+    style="backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Vista ampliada de fotografía"
+  >
+    <!-- Botón Cerrar Vectorial -->
+    <button
+      id="lightbox-close"
+      type="button"
+      aria-label="Cerrar vista ampliada"
+      class="absolute top-5 right-5 z-20 w-11 h-11 rounded-full border border-gold/60 bg-emeraldDeep/80 text-goldLight flex items-center justify-center hover:bg-gold hover:text-emeraldDeep transition-colors"
+    >
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+    </button>
+
+    <!-- Botón Anterior Lightbox -->
+    <button
+      id="lightbox-prev"
+      type="button"
+      aria-label="Fotografía anterior"
+      class="absolute left-3 sm:left-8 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full border border-gold/60 bg-emeraldDeep/80 text-goldLight flex items-center justify-center hover:bg-gold hover:text-emeraldDeep transition-colors"
+    >
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6" />
+      </svg>
+    </button>
+
+    <!-- Botón Siguiente Lightbox -->
+    <button
+      id="lightbox-next"
+      type="button"
+      aria-label="Fotografía siguiente"
+      class="absolute right-3 sm:right-8 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full border border-gold/60 bg-emeraldDeep/80 text-goldLight flex items-center justify-center hover:bg-gold hover:text-emeraldDeep transition-colors"
+    >
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6" />
+      </svg>
+    </button>
+
+    <!-- Contenedor de la Imagen en Lightbox -->
+    <div class="relative max-w-2xl w-full max-h-[88dvh] flex flex-col items-center">
+      <div class="w-full rounded-xl overflow-hidden border border-gold/70 bg-[#0A1811]/90 shadow-2xl relative max-h-[78dvh] flex items-center justify-center p-2">
+        <img
+          id="lightbox-img"
+          src=""
+          alt="Vista ampliada"
+          class="w-full max-h-[74dvh] object-contain select-none"
+        />
+      </div>
+      <p id="lightbox-caption" class="font-serifEditorial italic text-lg text-goldLight mt-4 tracking-wide"></p>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       JAVASCRIPT VANILLA: INTERACTIVIDAD, AUDIO, CUENTA REGRESIVA Y ANIMACIONES
+       ========================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* ------------------------------------------------------------------------
+         1. SPLASH SCREEN Y CONTROL DE MÚSICA DE FONDO
+         ------------------------------------------------------------------------ */
+      const splashScreen = document.getElementById('splash-screen');
+      const enterBtn = document.getElementById('enter-invitation-btn');
+      const bgMusic = document.getElementById('bg-music');
+      const musicToggle = document.getElementById('music-toggle');
+      let isMusicPlaying = false;
+
+      function updateMusicButtonUI(playing) {
+        if (playing) {
+          musicToggle.classList.add('playing');
+          musicToggle.style.opacity = '1';
+        } else {
+          musicToggle.classList.remove('playing');
+          musicToggle.style.opacity = '0.75';
+        }
+      }
+
+      enterBtn.addEventListener('click', () => {
+        // Desvanecer el splash screen con fade-out + scale
+        splashScreen.classList.add('splash-hidden');
+        document.body.classList.remove('lock-scroll');
+
+        // Mostrar botón flotante de música
+        musicToggle.classList.remove('opacity-0', 'pointer-events-none');
+
+        // Intentar reproducir el audio musica.mp3
+        if (bgMusic) {
+          bgMusic.play().then(() => {
+            isMusicPlaying = true;
+            updateMusicButtonUI(true);
+          }).catch(() => {
+            isMusicPlaying = false;
+            updateMusicButtonUI(false);
+          });
+        }
+      });
+
+      musicToggle.addEventListener('click', () => {
+        if (!bgMusic) return;
+        if (isMusicPlaying) {
+          bgMusic.pause();
+          isMusicPlaying = false;
+          updateMusicButtonUI(false);
+        } else {
+          bgMusic.play().then(() => {
+            isMusicPlaying = true;
+            updateMusicButtonUI(true);
+          }).catch(() => {
+            isMusicPlaying = false;
+            updateMusicButtonUI(false);
+          });
+        }
+      });
+
+      /* ------------------------------------------------------------------------
+         2. INTERSECTION OBSERVER PARA REVELADO Y TRAZADO DE VECTORES SVG
+         ------------------------------------------------------------------------ */
+      const animatedElements = document.querySelectorAll('.reveal, .svg-draw');
+
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -10% 0px',
+        threshold: 0.12
+      };
+
+      const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      }, observerOptions);
+
+      animatedElements.forEach((el) => scrollObserver.observe(el));
+
+      /* ------------------------------------------------------------------------
+         3. EFECTO PARALLAX SUAVE EN LA SEGUNDA FOTOGRAFÍA INTERCALADA
+         ------------------------------------------------------------------------ */
+      const parallaxImages = document.querySelectorAll('.parallax-img');
+
+      window.addEventListener('scroll', () => {
+        const viewportHeight = window.innerHeight;
+        parallaxImages.forEach((img) => {
+          const rect = img.parentElement.getBoundingClientRect();
+          if (rect.top < viewportHeight && rect.bottom > 0) {
+            const progress = (viewportHeight - rect.top) / (viewportHeight + rect.height);
+            const translateY = (progress - 0.5) * -28;
+            img.style.transform = `translateY(${translateY}px) scale(1.04)`;
+          }
+        });
+      }, { passive: true });
+
+      /* ------------------------------------------------------------------------
+         4. CUENTA REGRESIVA EN TIEMPO REAL (19 DE DICIEMBRE DE 2026 - 18:00 HRS)
+         ------------------------------------------------------------------------ */
+      const targetDate = new Date('2026-12-19T18:00:00').getTime();
+      const daysEl = document.getElementById('cd-days');
+      const hoursEl = document.getElementById('cd-hours');
+      const minutesEl = document.getElementById('cd-minutes');
+      const secondsEl = document.getElementById('cd-seconds');
+
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance <= 0) {
+          daysEl.textContent = '00';
+          hoursEl.textContent = '00';
+          minutesEl.textContent = '00';
+          secondsEl.textContent = '00';
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        daysEl.textContent = String(days).padStart(2, '0');
+        hoursEl.textContent = String(hours).padStart(2, '0');
+        minutesEl.textContent = String(minutes).padStart(2, '0');
+        secondsEl.textContent = String(seconds).padStart(2, '0');
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+
+      /* ------------------------------------------------------------------------
+         5. GALERÍA POLAROID APILADA (SWIPEABLE STACK) + MODAL LIGHTBOX
+         ------------------------------------------------------------------------ */
+      const polaroidStage = document.getElementById('polaroid-stack-stage');
+      const allPolaroidCards = Array.from(document.querySelectorAll('.polaroid-stack-card'));
+
+      // Configuraciones de ángulo (-6deg a 6deg) y escala para dar aspecto de mazo natural
+      const stackPresets = [
+        { rotate: 0,    scale: 1,    translateY: 0,  opacity: 1   },
+        { rotate: -4.2, scale: 0.96, translateY: 6,  opacity: 1   },
+        { rotate: 4.8,  scale: 0.93, translateY: 11, opacity: 0.95 },
+        { rotate: -5.8, scale: 0.90, translateY: 16, opacity: 0.88 },
+        { rotate: 5.4,  scale: 0.87, translateY: 20, opacity: 0.75 }
+      ];
+
+      function layoutPolaroidStack() {
+        if (!polaroidStage) return;
+        const cards = Array.from(polaroidStage.querySelectorAll('.polaroid-stack-card'));
+        const total = cards.length;
+
+        cards.forEach((card, index) => {
+          card.style.zIndex = String(total - index);
+          const preset = stackPresets[index] || {
+            rotate: index % 2 === 0 ? 3.5 : -3.5,
+            scale: 0.84,
+            translateY: 22,
+            opacity: 0
+          };
+          card.style.opacity = String(preset.opacity);
+          card.style.transform = `translate3d(0px, ${preset.translateY}px, 0px) scale(${preset.scale}) rotate(${preset.rotate}deg)`;
+          card.style.pointerEvents = index === 0 ? 'auto' : 'none';
+        });
+      }
+
+      layoutPolaroidStack();
+
+      // Variables de control de arrastre (Touch & Mouse Pointer Events)
+      let isDraggingCard = false;
+      let startX = 0;
+      let startY = 0;
+      let currentDeltaX = 0;
+      let currentDeltaY = 0;
+      let activeCard = null;
+      let isAnimatingOut = false;
+      const SWIPE_THRESHOLD = 80;
+      const TAP_THRESHOLD = 10;
+
+      // Lightbox referencias
+      const lightboxModal = document.getElementById('lightbox-modal');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxCaption = document.getElementById('lightbox-caption');
+      const lightboxClose = document.getElementById('lightbox-close');
+      const lightboxPrev = document.getElementById('lightbox-prev');
+      const lightboxNext = document.getElementById('lightbox-next');
+      let lightboxIndex = 0;
+
+      function openLightboxByCard(cardElement) {
+        const idx = allPolaroidCards.indexOf(cardElement);
+        openLightbox(idx >= 0 ? idx : 0);
+      }
+
+      function openLightbox(index) {
+        lightboxIndex = (index + allPolaroidCards.length) % allPolaroidCards.length;
+        const card = allPolaroidCards[lightboxIndex];
+        const imgEl = card.querySelector('img');
+        const src = imgEl ? imgEl.getAttribute('src') : '';
+        const caption = card.getAttribute('data-caption') || '';
+
+        lightboxImg.src = src;
+        lightboxCaption.textContent = caption;
+
+        lightboxModal.classList.remove('hidden');
+        lightboxModal.classList.add('flex');
+        requestAnimationFrame(() => {
+          lightboxModal.classList.remove('opacity-0');
+          lightboxModal.classList.add('opacity-100');
+        });
+      }
+
+      function closeLightbox() {
+        lightboxModal.classList.remove('opacity-100');
+        lightboxModal.classList.add('opacity-0');
+        setTimeout(() => {
+          lightboxModal.classList.remove('flex');
+          lightboxModal.classList.add('hidden');
+        }, 300);
+      }
+
+      if (polaroidStage) {
+        polaroidStage.addEventListener('pointerdown', (e) => {
+          if (isAnimatingOut) return;
+          const topCard = polaroidStage.querySelector('.polaroid-stack-card');
+          if (!topCard || e.target !== topCard && !topCard.contains(e.target)) return;
+
+          activeCard = topCard;
+          isDraggingCard = true;
+          startX = e.clientX;
+          startY = e.clientY;
+          currentDeltaX = 0;
+          currentDeltaY = 0;
+
+          activeCard.classList.add('is-dragging');
+          if (activeCard.setPointerCapture) {
+            try { activeCard.setPointerCapture(e.pointerId); } catch (_) {}
+          }
+        });
+
+        polaroidStage.addEventListener('pointermove', (e) => {
+          if (!isDraggingCard || !activeCard) return;
+
+          currentDeltaX = e.clientX - startX;
+          currentDeltaY = e.clientY - startY;
+
+          const rotation = currentDeltaX * 0.065;
+          const verticalFollow = currentDeltaY * 0.14;
+          activeCard.style.transform = `translate3d(${currentDeltaX}px, ${verticalFollow}px, 0px) scale(1) rotate(${rotation}deg)`;
+        });
+
+        const finishCardGesture = (e) => {
+          if (!isDraggingCard || !activeCard) return;
+          isDraggingCard = false;
+
+          const card = activeCard;
+          activeCard = null;
+          card.classList.remove('is-dragging');
+
+          if (e && card.releasePointerCapture) {
+            try { card.releasePointerCapture(e.pointerId); } catch (_) {}
+          }
+
+          const totalDisplacement = Math.hypot(currentDeltaX, currentDeltaY);
+
+          // 1. Toque rápido (< 10px): abrir modal Lightbox a pantalla completa
+          if (totalDisplacement < TAP_THRESHOLD) {
+            layoutPolaroidStack();
+            openLightboxByCard(card);
+            return;
+          }
+
+          // 2. Arrastre supera el umbral de 80px: deslizar hacia afuera y enviar al fondo de la pila
+          if (Math.abs(currentDeltaX) > SWIPE_THRESHOLD) {
+            isAnimatingOut = true;
+            const direction = currentDeltaX > 0 ? 1 : -1;
+            const flyOutX = direction * (polaroidStage.clientWidth * 1.22);
+            const flyOutRotate = direction * 18;
+
+            card.style.transform = `translate3d(${flyOutX}px, 16px, 0px) scale(0.92) rotate(${flyOutRotate}deg)`;
+            card.style.opacity = '0';
+
+            // Adelantar visualmente el resto del mazo mientras la tarjeta sale
+            const remaining = Array.from(polaroidStage.querySelectorAll('.polaroid-stack-card')).slice(1);
+            remaining.forEach((remCard, idx) => {
+              const preset = stackPresets[idx] || stackPresets[stackPresets.length - 1];
+              remCard.style.transform = `translate3d(0px, ${preset.translateY}px, 0px) scale(${preset.scale}) rotate(${preset.rotate}deg)`;
+              remCard.style.opacity = String(preset.opacity);
+            });
+
+            setTimeout(() => {
+              polaroidStage.appendChild(card);
+              layoutPolaroidStack();
+              isAnimatingOut = false;
+            }, 280);
+          } else {
+            // 3. No supera los 80px: regresa elásticamente al centro
+            layoutPolaroidStack();
+          }
+        };
+
+        polaroidStage.addEventListener('pointerup', finishCardGesture);
+        polaroidStage.addEventListener('pointercancel', finishCardGesture);
+      }
+
+      lightboxClose.addEventListener('click', closeLightbox);
+      lightboxPrev.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openLightbox(lightboxIndex - 1);
+      });
+      lightboxNext.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openLightbox(lightboxIndex + 1);
+      });
+
+      lightboxModal.addEventListener('click', (e) => {
+        if (e.target === lightboxModal) closeLightbox();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (lightboxModal.classList.contains('hidden')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') openLightbox(lightboxIndex - 1);
+        if (e.key === 'ArrowRight') openLightbox(lightboxIndex + 1);
+      });
+
+      /* ------------------------------------------------------------------------
+         6. CANVAS ATMOSFÉRICO: PARTÍCULAS DORADAS (LUCIÉRNAGAS SUTILES)
+         ------------------------------------------------------------------------ */
+      const canvas = document.getElementById('fireflies-canvas');
+      const ctx = canvas.getContext('2d');
+      let width = (canvas.width = window.innerWidth);
+      let height = (canvas.height = window.innerHeight);
+
+      window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      });
+
+      const particleCount = 26;
+      const fireflies = Array.from({ length: particleCount }, () => ({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        radius: Math.random() * 1.8 + 0.8,
+        speedX: (Math.random() - 0.5) * 0.25,
+        speedY: -Math.random() * 0.35 - 0.08,
+        alpha: Math.random() * 0.65 + 0.15,
+        pulseSpeed: Math.random() * 0.018 + 0.006,
+        phase: Math.random() * Math.PI * 2
+      }));
+
+      function renderFireflies() {
+        ctx.clearRect(0, 0, width, height);
+
+        fireflies.forEach((p) => {
+          p.x += p.speedX;
+          p.y += p.speedY;
+          p.phase += p.pulseSpeed;
+
+          if (p.y < -10) p.y = height + 10;
+          if (p.x < -10) p.x = width + 10;
+          if (p.x > width + 10) p.x = -10;
+
+          const currentAlpha = p.alpha * (0.5 + 0.5 * Math.sin(p.phase));
+
+          const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.radius * 4.2);
+          grad.addColorStop(0, `rgba(230, 199, 134, ${currentAlpha})`);
+          grad.addColorStop(0.5, `rgba(197, 160, 89, ${currentAlpha * 0.45})`);
+          grad.addColorStop(1, 'rgba(197, 160, 89, 0)');
+
+          ctx.beginPath();
+          ctx.fillStyle = grad;
+          ctx.arc(p.x, p.y, p.radius * 4.2, 0, Math.PI * 2);
+          ctx.fill();
+        });
+
+        requestAnimationFrame(renderFireflies);
+      }
+
+      renderFireflies();
+    });
+  </script>
+</body>
+</html>
